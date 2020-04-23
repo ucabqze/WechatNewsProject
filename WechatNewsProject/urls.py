@@ -30,8 +30,20 @@ from django.conf.urls import url
 from werobot.contrib.django import make_view
 from weNewsModel.sender_wechatRobot import robot
 
+# urlpatterns = [
+#     url(r'^$', views.print_text),
+#     url(r'^send/', views.send_news),
+#     url(r'^robot/',make_view(robot))
+# ]
+
+# urlpatterns = [
+#     path('^admin/', admin.site.urls),
+#     path('^send/', views.weixin_main),
+#     path(r'^page/', views.send_news),
+# ]
+
 urlpatterns = [
-    url(r'^$', views.print_text),
-    url(r'^send/', views.send_news),
-    url(r'^robot/',make_view(robot))
+    url(r'^$', views.weixin_main),
+    url(r'^weixin/', views.weixin_main),
+
 ]

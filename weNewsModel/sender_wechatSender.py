@@ -22,7 +22,9 @@ def get_title_text():
     news_num = 5
     save_dir =  cfg.save_dir
     start_date, end_date = auto_date_range()
-    keyword_dict = {'中信': 0.8}
+    # start_date = '2020-04-15'
+    # end_date = '2020-04-20'
+    keyword_dict = {'的': 0.8}
     
     # 找到相关文章的路径
     related = ns.get_related_news(save_dir, start_date, end_date, keyword_dict)
@@ -73,44 +75,3 @@ def auto_date_range():
     return start, end
 
 
-    
-#     # #text为推送的title,desp为推送的描述
-#     # for sckey in sckey_list:
-#     #     url = 'https://sc.ftqq.com/{sckey}.send?text={title}&desp={text}'\
-#     #         .format(sckey = sckey, title = title, text = text)
-#     #     requests.get(url)
-        
-#     #text为推送的title,desp为推送的描述
-#     for sckey in sckey_list:
-#         url = 'https://pushbear.ftqq.com/sub?sendkey={sckey}&text={title}&desp={text}'\
-#             .format(sckey = sckey, title = title, text = text)
-#         requests.get(url)
-                
-
-# # {
-# #   "sendkey": "17964-baa0f529e8bffdd1e04f07de25b4cd29",
-# #   "text": "title",
-# #   "desp": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext"
-# # }
-                
-# import  requests
-
-# url="https://pushbear.ftqq.com/sub"
-
-# data={
-#   "sendkey": "17964-baa0f529e8bffdd1e04f07de25b4cd29",
-#   "text": "testing-title",
-#   "desp": "测试消息1-text"
-# }
-
-# headers={
-#     "Accept":"application/json, text/javascript, */*; q=0.01",
-#     "Accept-Encoding":"gzip, deflate, br",
-#     "User-Agent":"Mozilla/5.0 (Windows NT 6.1; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0"}
-
-# # send_news()
-# result=requests.post(url,data=data,headers=headers)
-# print(result.content)
-
-            
-     
